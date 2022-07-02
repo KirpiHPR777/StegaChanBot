@@ -80,7 +80,7 @@ bot.on('message', msg =>{
                     steganography.decode(path)
                     .then(secretMessage => {
                         operation = '';
-                        return bot.sendMessage(message.chat.id, secretMessage);
+                        return bot.sendMessage(message.chat.id, `Result: ${secretMessage}`);
                     });
                 }
             });
