@@ -40,7 +40,7 @@ bot.on('message', msg =>{
 
         if(invalidSymbols.length !== 0)
             return bot.sendMessage(msg.chat.id, `I found invalid symbols: ${invalidSymbols.join(' ')}. Try again. ╮(. ❛ ᴗ ❛.)╭`);
-        else if(lengthOfSecretMessage > 1000)
+        else if(lengthOfSecretMessage > 1020)
             return bot.sendMessage(msg.chat.id, `The max length of message is ~140. Try again. ╮(. ❛ ᴗ ❛.)╭`);
         else{
             secretMessage = msg.text;
