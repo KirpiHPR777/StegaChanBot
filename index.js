@@ -62,8 +62,8 @@ bot.on('message', msg =>{
             if(message.document.mime_type !== 'image/png' && !message.text)
                 return bot.sendMessage(msg.chat.id, `It is not PNG. Try again. ╮(. ❛ ᴗ ❛.)╭`);
 
-            if(message.document.file_size > 20)
-                return bot.sendMessage(msg.chat.id, `It is not PNG. Try again. ╮(. ❛ ᴗ ❛.)╭`);
+            if(message.document.file_size > 20000)
+                return bot.sendMessage(msg.chat.id, `File is really large. Try again. ╮(. ❛ ᴗ ❛.)╭`);
             
             let chatID = message.chat.id;
             let downloadingDateTime = new Date().toLocaleString().replace(/\.|\:|, /g, '_');
