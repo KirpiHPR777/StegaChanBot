@@ -59,6 +59,7 @@ bot.on('message', msg =>{
     
     else if((operation === 'decode_1' || operation === 'encode_2') && msg.document){
         bot.on('document', message => {
+            console.log(message.document);
             if(message.document.mime_type !== 'image/png' && !message.text)
                 return bot.sendMessage(msg.chat.id, `It is not PNG. Try again. ╮(. ❛ ᴗ ❛.)╭`);
 
